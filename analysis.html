@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junk Food Research Data</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            overflow-x: hidden; /* Disable horizontal scroll */
+        }
+
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #333;
+        }
+
+        /* Background image with 50% opacity, covers the screen, no repetition */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://lh5.googleusercontent.com/sKQAUxlWGmi3GwD2uMEe1mABEA5BwFrYpzow8T0iqopz_CkFMWid_JMpqvdj1cH1uupj64TVDIfLzgnDJH2akn3AEZWGY6zK8_MgyRgLOCe15WORIh_tRya7EZCzZCQOnfjgIYG4ZYezOtwbfLGmtlbt0QOGBlI-nZ951PEQU625PAZtnqGv6DE0qb0zUg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.8; /* 50% opacity */
+            z-index: -1;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #ff5733;
+            color: white;
+            padding: 30px;
+            min-height: 70px;
+            border-bottom: #cd3f12 3px solid;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-top: 0;
+        }
+
+        .navbar {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            background-color: white; /* White background for the navbar */
+            padding: 10px 0;
+        }
+
+        .navbar li a {
+            color: #550000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .navbar li a:hover {
+            color: #f39c12;
+        }
+
+        .data-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff5733;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .data-section h3 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 10px;
+            border-bottom: 2px solid #ff5733;
+            padding-bottom: 5px;
+        }
+
+        .data-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .highlight {
+            background-color: #ffefcc;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .rate-buttons {
+            margin: 20px 0;
+        }
+
+        .rate-buttons button {
+            background-color: #ff5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .rate-buttons button:hover {
+            background-color: #cd3f12;
+        }
+        .button-container {
+    margin-top: 30px;
+}
+
+.custom-button {
+    display: inline-block;
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0 15px;
+}
+
+.custom-button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+.custom-button:active {
+    background-color: #d84315;
+}
+
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar li {
+                margin: 10px 0;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .data-section p, .data-section h3 {
+                font-size: 18px;
+            }
+
+            .rate-buttons button {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .rate-buttons button {
+                font-size: 24px;
+            }
+
+            .data-section p, .data-section h3 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="analysis.html">Analysis</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            
+        </nav>
+
+
+    <header>
+        <div class="container">
+            <h1>Junk Food Outlet Research Analysis</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="data-section">
+            <h2>Overview of Collected Data</h2>
+
+            <center><p style="font-size: 20px;">To perform research & analysis on the Junk Food, we created a dedicated google form for taking the data.</p>
+                <p style="font-size: 20px;">In this, several fields like commonly served foods, oils used in the outlets, how many items included refined flour etc were asked.</p>
+                <p style="font-size: 20px;">The data once collected was later analysed & below are the essential insights from th data collected...</p>
+           <br>
+                
+            <h3>MOST COMMON FOOD ITEMS OFFERED</h3>
+            <p style="font-size: 30px;">Burgers, Fries, Pizzas, Sandwiches, Soft Drinks (Mostly Junk Foods)</p><br>
+
+            <h3>AVERAGE RATE OF JUNK MEALS</h3>
+            <div class="rate-buttons" style="font-size: 60px;">
+                <button style="font-size: 40px;">50-200</button> >
+                <button style="font-size: 40px;">200-600</button> >
+                <button style="font-size: 40px;">600-1000</button><br><br>
+                <img src="/img/avgrate.JPG" alt="">
+                <p style="font-size: 30px; color:#cd3f12;">Above data indicated that <b>Junk food is cheaper in cost with cheap health benefits!</b></p>
+                <p style="font-size: 20px; color:#471100;">Research indicates that while junk food is often cheaper and more accessible, its affordability comes at the expense of health. Studies show that the low cost of junk food is driven by its reliance on inexpensive ingredients such as refined sugars, unhealthy fats, and artificial additives, which provide minimal nutritional value. Despite being budget-friendly, these foods contribute to a range of health issues, including obesity, heart disease, and diabetes. The hidden costs of consuming junk food, in terms of long-term medical expenses and reduced quality of life, far outweigh the initial savings on price.</p><br>
+            </div>
+
+            <h3>MOST POPULAR ITEMS</h3>
+            <img src="/img/POPUL.JPG" alt="">
+            <p style="font-size: 30px; color:#cd3f12;">Here, we can clearly see that, <b>Pizza, Momos, Burgers(All Junk Food) tops the list!</b> </p><br>
+            <p style="font-size: 20px; color:#471100;">The analysis of Google Form results highlights that Pizza, Momos, and Burgers—common junk food items—dominate consumer preferences. This trend is consistent with broader research, which shows that the growing appeal of high-calorie, processed foods is driven by convenience, taste, and aggressive marketing strategies. Junk food, rich in fats, sugars, and sodium, is designed to be hyper-palatable, making it more addictive. While these foods offer short-term satisfaction, long-term consumption is linked to adverse health effects, such as obesity, cardiovascular diseases, and diabetes. The popularity of these foods emphasizes the need for increased awareness and intervention on healthier eating habits.</p><br>
+            
+            <h3>HIGHLY USED INGREDIENT</h3>
+            <img src="/img/mostused.JPG" alt="">
+            <p style="font-size: 30px; color:#cd3f12;">Here, we can clearly see that, the most used ingredients majorly has <b>Refined Flours in most responses!</b> </p><br><br>
+            <p style="font-size: 20px; color:#471100;">Analysis of the Google Form responses indicates a concerning trend: the most frequently used ingredient across various food products is refined flour (maida). Refined flour, commonly associated with processed foods, undergoes extensive processing that removes its natural fibers and nutrients. This leads to a spike in the glycemic index, promoting rapid sugar absorption and contributing to health issues such as obesity, diabetes, and cardiovascular diseases. The prevalence of refined flour in consumer diets underscores the need for public awareness about its negative health impacts and the promotion of healthier, whole-grain alternatives in food consumption.</p><br>
+            
+
+            <h3>MOSTLY USED OILS</h3>
+            <img src="/img/oils.JPG" alt="">
+            <p style="font-size: 30px; color:#cd3f12;">As per the data collectd, we can observe that highly used oils in the outlets is <b>Sunflower oil.</b></p><br><br>
+            <p style="font-size: 20px; color:#471100;">The analysis of Google Form results reveals a notable trend in the oil preferences across various outlets, with sunflower oil emerging as the most frequently utilized option. This trend can be attributed to several factors. Sunflower oil is renowned for its high smoke point, making it suitable for various cooking methods, including frying and sautéing. Additionally, its light flavor and versatility enhance the appeal for culinary applications. Furthermore, sunflower oil is rich in unsaturated fats and vitamin E, aligning with health-conscious consumers' preferences for healthier cooking oils. The growing awareness of nutrition and wellness, combined with sunflower oil's cost-effectiveness, likely contributes to its widespread usage. This data underscores the importance of understanding consumer preferences in shaping inventory decisions and marketing strategies within the food industry.</p><br>
+            
+
+            <h3>TYPE OF WATER PROVIDED</h3>
+            <img src="/img/water.JPG" alt="">
+            <p style="font-size: 30px; color:#cd3f12;">As per the data collectd, we can observe that majority of the outlets provide both options, but the<b>Amount of bisleri(fresh water) providers is still less.</b></p><br><br>
+            <p style="font-size: 20px; color:#471100;">The analysis of Google Form results indicates that a significant number of outlets offer both bottled water and fresh water options to consumers. However, it is noteworthy that the availability of Bisleri, a prominent brand of fresh water, remains relatively limited. This discrepancy suggests a potential gap in market demand and supply, highlighting an opportunity for outlets to enhance their offerings. The limited presence of Bisleri could be attributed to factors such as distribution challenges, pricing strategies, or a lack of consumer awareness about the benefits of choosing fresh water over bottled alternatives. Further research could explore the underlying reasons for this trend and assess consumer preferences, ultimately guiding outlets to optimize their product selection in response to evolving customer needs.</p><br>
+            
+
+            <h3>ITEMS CONTAINING MAIDA</h3>
+            <img src="/img/flour.JPG" alt="">
+            <p style="font-size: 30px; color:#cd3f12;">As per the data collectd, it is observed that <b>Maximum items contained Refined Flour(Maida)(Junk) in their dishes.</b></p><br><br>
+            <p style="font-size: 20px; color:#471100;">Refined flour, commonly known as maida, is a staple ingredient in many cuisines, particularly in the preparation of various snacks and dishes. However, its high consumption raises concerns due to its nutritional profile. Maida is processed from wheat grains, stripping away the bran and germ, which contain essential nutrients and fiber. As a result, dishes made with refined flour are often high in calories but low in essential vitamins and minerals, contributing to unhealthy eating habits. The prevalence of maida in junk foods, such as pastries, noodles, and fried snacks, is alarming, as these items can lead to increased risk of obesity, diabetes, and other health issues. Research indicates that the excessive intake of refined carbohydrates can spike blood sugar levels and promote cravings, leading to overconsumption and potential health complications. Understanding the implications of refined flour consumption is crucial in addressing dietary concerns and promoting healthier food choices.</p><br>
+            
+
+            <h3>CUSTOMER REVIEWS</h3>
+            <img src="/img/cust.JPG" alt="">
+            <p style="font-size: 30px; color:#cd3f12;">Above is the data of some common reviews recieved from the customers. The data indiactes that most customers(teenagers) love junk food just for the taste & the status of living is offers in the society.</p><br><br>
+            <p style="font-size: 20px; color:#471100;">Recent customer reviews indicate a significant trend among teenagers regarding their affection for junk food, primarily driven by taste preferences and social status. Many respondents highlighted that the appealing flavors and convenience of junk food make it an attractive choice, especially in a fast-paced lifestyle. Additionally, there is a notable correlation between junk food consumption and perceived social status; teenagers often associate certain brands and types of junk food with popularity and acceptance within their peer groups. This underscores the broader societal influences on dietary choices, suggesting that taste alone is not the sole motivator for consumption. Instead, the social context plays a crucial role, emphasizing the need for targeted health education and awareness campaigns that address both the taste appeal and the underlying social dynamics associated with junk food consumption.</p><br>
+            
+        </section>
+    </div>
+
+    
+
+</center>
+
+<center>
+    <div class="button-container">
+      <a href="https://docs.google.com/document/d/1LgJCKbl1BQEroSaSX17dJ14qhKGlw9TFhOGV9uUKlSM/edit" target="_blank" class="custom-button">View Documentation</a>
+      <a href="https://docs.google.com/presentation/d/1-c5ivDFrNbmXlh9VqLosUhoSPrkYZI5I/edit?usp=drive_link&ouid=110977022908887136562&rtpof=true&sd=true" target="_blank" class="custom-button">View Presentation</a>
+  </div>  
+   </center>
+
+    <footer>
+        <p>© 2024 Junk Food Research Project</p>
+    </footer>
+
+</body>
+</html>

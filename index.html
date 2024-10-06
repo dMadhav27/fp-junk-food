@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junk Food Research Insights</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="analysis.html">Analysis</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Junk Food Research Insights</h1>
+            <p>Exploring the consumption habits and health impacts of junk food over time.</p>
+            <div class="buttons">
+                <button onclick="window.location.href='/analysis.html'">Analysis</button>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="visits" class="visits"><br>
+        <h2>Our Agenda</h2><br><br><br>
+        <div class="visit-gallery">
+            <div class="visit-item">
+                <img src="https://imagevars.gulfnews.com/2019/09/03/Junk-food-0212_16cf76b50a6_medium.jpg" alt="Visit 1">
+                <p>Collected data from various fast food chains, offering a wide range of food items. We also considered sample food items options from food outlets. We observed eating habits and noted down frequent items ordered, focusing on meals popular among the general public.</p>
+            </div>
+            <div class="visit-item">
+                <img src="https://media.istockphoto.com/id/1345875024/vector/searching-knowledge-concept.jpg?s=612x612&w=0&k=20&c=7RNNoMO5TE-YRZkafXXLXkqDTEgJ4mAvx7JcUrE73LI=" alt="Visit 2">
+                <p>Conducted a survey at a local school to understand food preferences. We found that over 60% of the people had junk food more than twice a week.</p>
+            </div>
+            <div class="visit-item">
+                <img src="https://media.istockphoto.com/id/925693186/vector/icon-icons-with-the-concept-of-correcting-evaluating-surveying.jpg?s=612x612&w=0&k=20&c=sLAQbaBX3n0cU3FqCmJ8ypYwvV2yoqTGb2GtC75_bNM=" alt="Visit 3">
+                <p>Analyzed the data of the survey forms from the people. Most snacks exceeded the healthier options and preferred towards refined flour and low-quality oils cooked items.</p>
+            </div>
+        </div>
+    </section>
+
+    <div style="background-color: #fee998; padding: 150px; text-align: center; margin-top: 50px; width: 100%; height: 400px;">
+        <h2 style="margin: 0; color: #333; font-size: 60px;">Thanks for visiting!</h2>
+        <p style="margin: 10px 0 0 0; color: #555; font-size: 30px;">We appreciate your interest in our research and insights. <br><br>Stay healthy!</p>
+    </div>
+
+     <center>
+      <div class="button-container">
+        <a href="https://docs.google.com/document/d/1LgJCKbl1BQEroSaSX17dJ14qhKGlw9TFhOGV9uUKlSM/edit" target="_blank" class="custom-button">View Documentation</a>
+        <a href="https://docs.google.com/presentation/d/1-c5ivDFrNbmXlh9VqLosUhoSPrkYZI5I/edit?usp=drive_link&ouid=110977022908887136562&rtpof=true&sd=true" target="_blank" class="custom-button">View Presentation</a>
+    </div>  
+     </center>
+     
+</div>
+
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+    <footer>
+        <p>&copy; 2024 Junk Food Field. Project developed by Madhav, Aditya & Adesh. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // When the user clicks on the button, scroll to the top of the document
+        scrollToTopBtn.onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        };
+    </script>
+</body>
+</html>

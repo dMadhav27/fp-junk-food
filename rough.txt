@@ -1,0 +1,41 @@
+
+    <section id="analysis" class="analysis">
+        <h2>Data Analysis</h2>
+        <p>In this section, we dive deep into the statistical analysis of junk food consumption patterns across different age groups, regions, and socioeconomic backgrounds. We have analyzed the nutritional value of popular junk foods, examining their impact on health.</p>
+
+        <div class="analysis-content">
+            <h3>Consumption Trends</h3>
+            <p>Over the last decade, junk food consumption has increased by 35% among teenagers and young adults. Fast food restaurants have become the most common source of meals for individuals aged 15-30. The most popular items are burgers, fries, and sugary drinks.</p>
+
+            <h3>Health Impact</h3>
+            <p>Our study revealed that frequent junk food consumption is linked to an increased risk of cardiovascular diseases, obesity, and Type 2 diabetes. Children exposed to high levels of sugary snacks develop early-stage cavities and digestive issues.</p>
+        </div>
+    </section>
+
+    <section id="feedback" class="feedback">
+        <h2>Feedback</h2>
+        <p>Your thoughts matter to us! Please leave your feedback below to help us improve and expand our research efforts. We value the opinions of everyone involved in the project and the general public.</p>
+        <textarea rows="10" cols="50" placeholder="Share your feedback here..."></textarea>
+        <button class="submit-feedback">Submit Feedback</button>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are a team of researchers and nutritionists dedicated to understanding the effects of junk food on health. Through our detailed research and analysis, we aim to raise awareness about the growing consumption of junk food and its potential risks.</p>
+    </section>
+
+
+
+
+<script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetSection = this.getAttribute('href');
+                document.querySelector(targetSection).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
