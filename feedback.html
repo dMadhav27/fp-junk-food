@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Junk Food Research</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f1f8e9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background-color: #8e44ad;
+            color: #ffffff;
+            padding: 25px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border-bottom: 5px solid #6c3483;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #6c3483;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            font-size: 16px;
+            border: 2px solid #dcdde1;
+            border-radius: 8px;
+            outline: none;
+            background-color: #f4f4f4;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #8e44ad;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #8e44ad;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #6c3483;
+        }
+
+        .rating-group {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .rating-group label {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+
+        input[type="radio"] {
+            margin-left: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+        <div class="container">
+            <h1>Feedback Form</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="outletName">Which Outlet Did You Visit?</label>
+                <input type="text" id="outletName" name="outletName" placeholder="Enter outlet name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="favoriteItem">Favorite Item:</label>
+                <input type="text" id="favoriteItem" name="favoriteItem" placeholder="Enter your favorite food item" required>
+            </div>
+
+            <div class="form-group rating-group">
+                <label>Rate Your Experience:</label>
+                <label>
+                    <input type="radio" name="rating" value="1"> 1
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="5"> 5
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="improvements">Any Suggestions for Improvement?</label>
+                <textarea id="improvements" name="improvements" placeholder="Your feedback" required></textarea>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+        
+    </div>
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+    <footer>
+        <p>&copy; 2024 Junk Food Field. Project developed by Madhav, Aditya & Adesh. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            alert("Thank you for your feedback!");
+            // You can add form submission logic here.
+        });
+    </script>
+
+</body>
+</html>
